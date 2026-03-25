@@ -40,5 +40,20 @@ class Program
         DateTime date5 = date1janvier.AddMonths(-1);
         Console.WriteLine(date5.ToLongDateString());
 
+        Console.WriteLine("\n_______________Partie 6_______________");
+        Console.WriteLine("Veuillez entrer une date (dd/MM/yyyy): ");
+        if (DateTime.TryParse(Console.ReadLine(), out DateTime dateSaisie))
+        {
+            if (dateSaisie.Date < dateActuelle.Date)
+                Console.WriteLine("La date est passée");
+            else if (dateSaisie.Date == dateActuelle.Date)
+                Console.WriteLine("La date est aujourd'hui");
+            else
+                Console.WriteLine("La date est dans le futur");
+        }
+        else
+        {
+            Console.WriteLine("Date invalide");
+        }
     }
 }
