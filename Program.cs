@@ -63,5 +63,23 @@ class Program
         DateTime.TryParse(Console.ReadLine(), out DateTime date2Partie7);
         TimeSpan diff = date1partie7 - date2Partie7;
         Console.WriteLine($"Différence : {diff.TotalDays} jour(s)");
+
+        Console.WriteLine("\n_______________Partie 8_______________");
+        Console.WriteLine("Veuillez entrer une date (dd/MM/yyyy): ");
+        if (DateTime.TryParse(Console.ReadLine(), out DateTime date1partie8))
+        {
+            Console.WriteLine(date1partie8);
+        }
+        else
+        {
+            Console.WriteLine("Date invalide");
+        }
+
+        Console.WriteLine("\n_______________Partie 9_______________");
+        DateTime dateActuelle2 = DateTime.Now;
+        TimeSpan duree = TimeSpan.FromDays(5);
+        DateTime dateFin = dateActuelle2 + duree;
+        Console.WriteLine($"Date de début : {dateActuelle2:dd/MM/yyyy}");
+        Console.WriteLine($"Date de fin   : {dateFin:dd/MM/yyyy}");
     }
 }
