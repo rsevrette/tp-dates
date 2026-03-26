@@ -55,5 +55,13 @@ class Program
         {
             Console.WriteLine("Date invalide");
         }
+
+        Console.WriteLine("\n_______________Partie 7_______________");
+        Console.WriteLine("Veuillez entrer une date (dd/MM/yyyy): ");
+        DateTime.TryParse(Console.ReadLine(), out DateTime date1partie7);
+        Console.WriteLine("Veuillez entrer une date (dd/MM/yyyy): ");
+        DateTime.TryParse(Console.ReadLine(), out DateTime date2Partie7);
+        TimeSpan diff = date1partie7 - date2Partie7;
+        Console.WriteLine($"Différence : {diff.TotalDays} jour(s)");
     }
 }
